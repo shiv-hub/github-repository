@@ -1,0 +1,22 @@
+
+    <div *ngIf="stat;else condition1">
+    <h1>Welcome User..{{userName}}</h1>
+    <form #formData="ngForm" (ngSubmit)="formLogout(formData)" novalidate>
+        <ul>
+            <li>la</li>
+            <li>la</li>
+            <li>la</li>
+            <li>la</li>
+        </ul>
+        <button id='submit'>Log Out</button>
+        </form>
+     </div>
+
+<ng-template #condition1>
+<h1>Welcome User..</h1>
+<form #formData="ngForm" (ngSubmit)="formLogin(formData)" novalidate>
+<label for="user-login"></label><br>
+<input type="text" name='userlogin' ngModel ><br>
+    <button id='submit'>Log    In</button>
+</form>
+</ng-template>
